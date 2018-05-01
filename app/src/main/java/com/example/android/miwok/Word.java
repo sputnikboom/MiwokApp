@@ -13,10 +13,17 @@ public class Word {
     // ID for Drawable resource
     private int mImageResourceID;
 
-    // constructor
+    // constructor for phrases activity
     public Word(String defaultTranslation, String miwokTranslation) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+    }
+
+    // constructor for numbers, family, colors activities
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+        mMiwokTranslation = miwokTranslation;
+        mDefaultTranslation = defaultTranslation;
+        mImageResourceID = imageResourceID;
     }
 
     /**
