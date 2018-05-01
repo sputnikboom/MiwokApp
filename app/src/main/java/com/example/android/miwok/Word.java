@@ -10,6 +10,9 @@ public class Word {
     // default translation of the word
     private String mDefaultTranslation;
 
+    // ID for Drawable resource
+    private int mImageResourceID;
+
     // constructor
     public Word(String defaultTranslation, String miwokTranslation) {
         mMiwokTranslation = miwokTranslation;
@@ -30,4 +33,10 @@ public class Word {
         return mMiwokTranslation;
     }
 
+    /**
+     * Get the image resource drawable ID
+     */
+    public int getImageResourceID() {
+        return mImageResourceID ;
+    }
 }
