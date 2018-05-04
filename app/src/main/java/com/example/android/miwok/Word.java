@@ -11,7 +11,10 @@ public class Word {
     private String mDefaultTranslation;
 
     // ID for Drawable resource
-    private int mImageResourceID;
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    // const value to represent no img value provided for word
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     // constructor for phrases activity
     public Word(String defaultTranslation, String miwokTranslation) {
@@ -40,10 +43,15 @@ public class Word {
         return mMiwokTranslation;
     }
 
+    // returns if there is an image resource for this word
+    public boolean hasImage() {
+        return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
+
     /**
      * Get the image resource drawable ID
      */
-    public int getImageResourceID() {
+    public int getImageResourceId() {
         return mImageResourceID ;
     }
 }
