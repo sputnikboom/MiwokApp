@@ -16,17 +16,22 @@ public class Word {
     // const value to represent no img value provided for word
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    // constructor for phrases activity
-    public Word(String defaultTranslation, String miwokTranslation) {
+    // ID for the word's audio file
+    private int mAudioResourceId;
+
+    // constructor for phrases activites
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
+        mAudioResourceId = audioResourceID;
     }
 
-    // constructor for numbers, family, colors activities
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+    // constructor for color, family, numbers activites
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int audioResourceId) {
         mMiwokTranslation = miwokTranslation;
         mDefaultTranslation = defaultTranslation;
         mImageResourceID = imageResourceID;
+        mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -54,4 +59,13 @@ public class Word {
     public int getImageResourceId() {
         return mImageResourceID ;
     }
-}
+
+    /**
+     * Get the ID of the audio file for the word
+     */
+    public int getAudioResourceId() {
+        return mAudioResourceId ; }
+    }
+
+
+
