@@ -12,34 +12,48 @@
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         android:paddingLeft="16dp">
 
         <TextView
             android:id="@+id/miwok_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="44dp"
             android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="lutti" />
+            android:layout_toLeftOf="@id/play_button"
+            tools:text="lutti"
+            tools:background="@android:color/holo_green_light"/>
 
         <TextView
             android:id="@+id/default_text_view"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="44dp"
+            android:layout_below="@id/miwok_text_view"
+            android:layout_toLeftOf="@id/play_button"
             android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
-            tools:text="one" />
+            tools:text="one"
+            tools:background="@android:color/holo_green_dark"/>
 
-    </LinearLayout>
+        <ImageView
+            android:src="@drawable/baseline_play_arrow_white_24"
+            android:id="@+id/play_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            tools:background="@android:color/black"
+
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
