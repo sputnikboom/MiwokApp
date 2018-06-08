@@ -16,10 +16,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
+    android:background="@color/primary_color"
     android:orientation="vertical">
 
     <android.support.design.widget.TabLayout
+        style="@style/CategoryTabs"
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
